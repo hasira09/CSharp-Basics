@@ -10,30 +10,23 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            string house;
-            string electricity;
-            string telephone;
-            string water;
+            Console.WriteLine("Enter the Student Marks ");
+            string number1;
+            number1 = Console.ReadLine();
+            int marks = Convert.ToInt32(number1);
 
-            Console.WriteLine("Please enter the monthly rent");
-            house = Console.ReadLine();
-            double house1 = Convert.ToDouble(house);
+            if (marks >= 75)
+                Console.WriteLine("your results is A");
+            else if (marks >= 65)
+                Console.WriteLine("your resuls is B");
 
-            Console.WriteLine("Please enter the avareage electricity");
-            electricity = Console.ReadLine();
-            double electricity1 = Convert.ToDouble(electricity);
+            else if (marks >= 50)
+                Console.WriteLine("your results is C");
+            else if (marks >= 40)
+                Console.WriteLine("your results is S");
+            else
+                Console.WriteLine("your results is F");
 
-            Console.WriteLine("Please enter the monthly telephone bill");
-            telephone = Console.ReadLine();
-            double telephone1 = Convert.ToDouble(telephone);
-
-            Console.WriteLine("Please enter the monthly water bill");
-            water = Console.ReadLine();
-            double water1 = Convert.ToDouble(water);
-
-            double totalExpenditure;
-            totalExpenditure = (house1 + electricity1 + telephone1 + water1) * 12;
-            Console.WriteLine("Total Expenditure for one year is " + totalExpenditure);
 
 
             System.Console.ReadLine();
