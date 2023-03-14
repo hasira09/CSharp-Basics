@@ -10,24 +10,21 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            /*
-            // Implicit Casting | Automatic Casting
+            //String User Input
 
-            int number = 15;
+            string name;
 
-            double nextnumber = number;
+            Console.Write("Please Enter Your Name: ");
+            name = Console.ReadLine();
 
-            Console.WriteLine(number);
-            Console.WriteLine(nextnumber); */
+            //Integer User Input
 
-            // Explicit Casting | Manual Casting
+            Console.Write("Please Enter Your Age: ");
+            int age = Int16.Parse(Console.ReadLine());
 
-            double number = 10;
 
-            int isNumber = (int)number;
-
-            Console.WriteLine(number);
-            Console.WriteLine(isNumber);
+            Console.WriteLine("Your Name is : " +name);
+            Console.WriteLine("Your Age is : " + age);
             System.Console.ReadLine();
         }
     }
