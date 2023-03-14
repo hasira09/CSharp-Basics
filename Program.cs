@@ -10,20 +10,24 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
+            /*
+            // Implicit Casting | Automatic Casting
 
-            // Variable Declaration
+            int number = 15;
 
-            string name; // words
+            double nextnumber = number;
 
-            int age; // whole numbers
+            Console.WriteLine(number);
+            Console.WriteLine(nextnumber); */
 
-            float salary;
-            double savemoney; // decimals
+            // Explicit Casting | Manual Casting
 
-            char fueltype; // single letter (characters)
+            double number = 10;
 
-            bool currencyStatus; // True or False
+            int isNumber = (int)number;
 
+            Console.WriteLine(number);
+            Console.WriteLine(isNumber);
             System.Console.ReadLine();
         }
     }
