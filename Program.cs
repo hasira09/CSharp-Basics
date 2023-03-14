@@ -27,8 +27,6 @@ namespace ConsoleApp1
             else
                 Console.WriteLine("your results is F");
 
-
-
             System.Console.ReadLine();
         }
     }
