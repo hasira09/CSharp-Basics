@@ -10,21 +10,37 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            //String User Input
+            int num1 = 20;
+            int num2 = 30;
+            int num3 = 30;
 
-            string name;
+            /*
+            //Arithmetic Operations
+            Console.WriteLine(num1 + num2);
+            Console.WriteLine(num1 - num2);
+            Console.WriteLine(num1 * num2);
+            Console.WriteLine(num1 / num2);
+            Console.WriteLine(num1 % num2);
+            Console.WriteLine(num1++);
+            Console.WriteLine(num1--);
+            Console.WriteLine(num2--);
+            Console.WriteLine(num2++);
+            
 
-            Console.Write("Please Enter Your Name: ");
-            name = Console.ReadLine();
+            //Assignment Operations 
+            Console.WriteLine(num1 == num2);
+            Console.WriteLine(num3 == num2);
+            Console.WriteLine(num1 != num2);
+            Console.WriteLine(num3 != num2);
+            Console.WriteLine(num1 > num2);
+            Console.WriteLine(num3 > num2);
+            */
 
-            //Integer User Input
+            //Logical Operators
+            Console.WriteLine(num1 < num2 && num2 == num3);
+            Console.WriteLine(num1 < num2 && num2 == num3);
+            Console.WriteLine(!(num1 < num2));
 
-            Console.Write("Please Enter Your Age: ");
-            int age = Int16.Parse(Console.ReadLine());
-
-
-            Console.WriteLine("Your Name is : " +name);
-            Console.WriteLine("Your Age is : " + age);
             System.Console.ReadLine();
         }
     }
