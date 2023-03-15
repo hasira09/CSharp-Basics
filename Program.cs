@@ -10,27 +10,46 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Console.Write("Enter Your Amount: ");
-            int number1 = Int16.Parse(Console.ReadLine());
+            /*
+            //While Loop
+            int i = 0, j = 1;
+
+            while (i <= 5) {
+                Console.WriteLine("i={0}", i);
+                i++;
+
+                while (j <= 2)
+                {
+                    Console.WriteLine("j = {0}", j);
+                    j++;
+                }
+
+            }
             
 
-            if (number1 >= 90) 
-                Console.WriteLine("10 Royalty Rewards");
-            
-            else if (number1 >= 75)
-                Console.WriteLine("8 Royalty Rewards");
+            //Do While Loop
+            int i = 0;
 
-            else if (number1 >= 60)
-                Console.WriteLine("6 Royalty Rewards");
+            do
+            {
+                Console.WriteLine("Value of i: {0}", i);
+                int j = i;
 
-            else if (number1 >= 45)
-                Console.WriteLine("4 Royalty Rewards");
+                i++;
 
-            else if (number1 >= 30)
-                Console.WriteLine("2 Royalty Rewards");
+                do
+                {
+                    Console.WriteLine("Value of j: {0}", j);
+                    j++;
+                } while (j < 2);
+            } while (i < 2);
+            */
 
-            else
-                Console.WriteLine("0 Royalty Rewards");
+            //For Loop
+            for (int i = 0; i <= 5; i++)
+            {
+                Console.WriteLine("for Loop in C# is {0}", i);
+            }
 
             System.Console.ReadLine();
         }
