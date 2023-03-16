@@ -10,47 +10,15 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            /*
-            //While Loop
-            int i = 0, j = 1;
-
-            while (i <= 5) {
-                Console.WriteLine("i={0}", i);
-                i++;
-
-                while (j <= 2)
+            for (int i = 0; i < 10; i++)
+            {
+                if (i == 6)
                 {
-                    Console.WriteLine("j = {0}", j);
-                    j++;
+                    continue;
+                    //break;
                 }
-
+                Console.WriteLine(i);
             }
-            
-
-            //Do While Loop
-            int i = 0;
-
-            do
-            {
-                Console.WriteLine("Value of i: {0}", i);
-                int j = i;
-
-                i++;
-
-                do
-                {
-                    Console.WriteLine("Value of j: {0}", j);
-                    j++;
-                } while (j < 2);
-            } while (i < 2);
-            */
-
-            //For Loop
-            for (int i = 0; i <= 5; i++)
-            {
-                Console.WriteLine("for Loop in C# is {0}", i);
-            }
-
             System.Console.ReadLine();
         }
     }
