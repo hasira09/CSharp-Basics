@@ -10,47 +10,31 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            /*
-            //While Loop
-            int i = 0, j = 1;
+            char ch;
+            Console.WriteLine("Enter an alphabet");
+            ch = Convert.ToChar(Console.ReadLine());
 
-            while (i <= 5) {
-                Console.WriteLine("i={0}", i);
-                i++;
-
-                while (j <= 2)
-                {
-                    Console.WriteLine("j = {0}", j);
-                    j++;
-                }
-
-            }
-            
-
-            //Do While Loop
-            int i = 0;
-
-            do
+            switch (Char.ToLower(ch))
             {
-                Console.WriteLine("Value of i: {0}", i);
-                int j = i;
-
-                i++;
-
-                do
-                {
-                    Console.WriteLine("Value of j: {0}", j);
-                    j++;
-                } while (j < 2);
-            } while (i < 2);
-            */
-
-            //For Loop
-            for (int i = 0; i <= 5; i++)
-            {
-                Console.WriteLine("for Loop in C# is {0}", i);
+                case 'a':
+                    Console.WriteLine("Vowel");
+                    break;
+                case 'e':
+                    Console.WriteLine("Vowel");
+                    break;
+                case 'i':
+                    Console.WriteLine("Vowel");
+                    break;
+                case 'o':
+                    Console.WriteLine("Vowel");
+                    break;
+                case 'u':
+                    Console.WriteLine("Vowel");
+                    break;
+                default:
+                    Console.WriteLine("Not a vowel");
+                    break;
             }
-
             System.Console.ReadLine();
         }
     }
