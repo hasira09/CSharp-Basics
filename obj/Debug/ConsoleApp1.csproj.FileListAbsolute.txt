@@ -22,3 +22,11 @@ D:\C# Programs\Github to C#\C-Basics\obj\Debug\ConsoleApp1.csproj.SuggestedBindi
 D:\C# Programs\Github to C#\C-Basics\obj\Debug\ConsoleApp1.csproj.CoreCompileInputs.cache
 D:\C# Programs\Github to C#\C-Basics\obj\Debug\ConsoleApp1.exe
 D:\C# Programs\Github to C#\C-Basics\obj\Debug\ConsoleApp1.pdb
+E:\C#_Fork\C-Basics\bin\Debug\ConsoleApp1.exe.config
+E:\C#_Fork\C-Basics\bin\Debug\ConsoleApp1.exe
+E:\C#_Fork\C-Basics\bin\Debug\ConsoleApp1.pdb
+E:\C#_Fork\C-Basics\obj\Debug\ConsoleApp1.csproj.AssemblyReference.cache
+E:\C#_Fork\C-Basics\obj\Debug\ConsoleApp1.csproj.SuggestedBindingRedirects.cache
+E:\C#_Fork\C-Basics\obj\Debug\ConsoleApp1.csproj.CoreCompileInputs.cache
+E:\C#_Fork\C-Basics\obj\Debug\ConsoleApp1.exe
+E:\C#_Fork\C-Basics\obj\Debug\ConsoleApp1.pdb
