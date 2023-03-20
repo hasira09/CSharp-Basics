@@ -10,16 +10,19 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            for (int i = 0; i < 10; i++)
+            try
             {
-                if (i == 6)
-                {
-                    continue;
-                    //break;
-                }
-                Console.WriteLine(i);
+                var number = "1234";
+                byte  b = Convert.ToByte(number);
+                Console.WriteLine(number);
             }
-            System.Console.ReadLine();
+            catch(Exception)
+            {
+                Console.WriteLine("this number can't convert to byte");
+            }
+    Console.ReadLine();
+
+
         }
     }
 }
