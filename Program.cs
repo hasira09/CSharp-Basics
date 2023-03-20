@@ -12,9 +12,9 @@ namespace ConsoleApp1
         {
             try
             {
-                var number = "1234";
-                byte  b = Convert.ToByte(number);
-                Console.WriteLine(number);
+                string str = "True";
+                bool b = Convert.ToBoolean(str);
+                Console.WriteLine(b);
             }
             catch(Exception)
             {
