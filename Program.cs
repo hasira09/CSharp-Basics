@@ -7,33 +7,34 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
+
+    public enum AirLines
+    {
+        SriLankan = 1,
+        Emirates = 2,
+        Quartar = 3
+    }
+
     class Program
     {
         static void Main(string[] args)
         {
-            var numbers = new int[3];
-            numbers[0] = 1;
+            var method = AirLines.SriLankan;
+            Console.WriteLine((int)method);
 
-            Console.WriteLine(numbers[0]);
-            Console.WriteLine(numbers[1]);
-            Console.WriteLine(numbers[2]);
+            var methoID = 2;
+            Console.WriteLine((AirLines)methoID);
 
-            var flags = new bool[3];
-            flags[0] = true;
+            Console.WriteLine(method.ToString());
 
-            Console.WriteLine(flags[0]);
-            Console.WriteLine(flags[1]);
-            Console.WriteLine(flags[2]);
-
-            var names = new string[3] { "Hasira", "Uma", "Tharu" };
-            Console.WriteLine(names[0]);
-            Console.WriteLine(names[1]);
-            Console.WriteLine(names[2]);
+            var methodName = "Airways";
+            var airWayMethod = (AirLines) Enum.Parse(typeof (AirLines), methodName);
+            Console.WriteLine(airWayMethod);
 
             Console.ReadLine();
 
         }
-        
+                                      
         
     }
 }
