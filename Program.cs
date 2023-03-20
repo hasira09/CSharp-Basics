@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ConsoleApp1.Maths;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,16 +11,18 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            for (int i = 0; i < 10; i++)
-            {
-                if (i == 6)
-                {
-                    continue;
-                    //break;
-                }
-                Console.WriteLine(i);
-            }
-            System.Console.ReadLine();
+            var hasira = new Person();
+            hasira.FirstName = "Hasira";
+            hasira.LastName = "Koswatta";
+            hasira.Introduce();
+
+            Calculator calculator = new Calculator();
+            var result = calculator.Add(8, 2);
+            Console.WriteLine(result);
+            Console.ReadLine();
+
         }
+        
+        
     }
 }
