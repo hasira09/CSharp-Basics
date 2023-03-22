@@ -8,28 +8,28 @@ using System.Threading.Tasks;
 namespace ConsoleApp1
 {
 
-    public enum AirLines
-    {
-        SriLankan = 1,
-        Emirates = 2,
-        Quartar = 3
-    }
-
     class Program
     {
         static void Main(string[] args)
         {
-            var method = AirLines.SriLankan;
-            Console.WriteLine((int)method);
+            var name = "Hasira Mahel";
 
-            var methoID = 2;
-            Console.WriteLine((AirLines)methoID);
+            //for (var i = 0;  i < name.Length; i++)
+            //{
+            //    Console.WriteLine(name[i]);
+            //}
 
-            Console.WriteLine(method.ToString());
+            //foreach (var character in name)
+            //{
+            //    Console.WriteLine(character);
+            //}
 
-            var methodName = "Airways";
-            var airWayMethod = (AirLines) Enum.Parse(typeof (AirLines), methodName);
-            Console.WriteLine(airWayMethod);
+            var numbers = new int[] { 0, 8, 2, 3, 2, 6 };
+
+            foreach (var number in numbers)
+            {
+                Console.WriteLine(number);
+            }
 
             Console.ReadLine();
 
