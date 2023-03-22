@@ -12,24 +12,43 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            var name = "Hasira Mahel";
+            var numbers = new[] {3,1,7,8,9,6,5,4};
 
-            //for (var i = 0;  i < name.Length; i++)
-            //{
-            //    Console.WriteLine(name[i]);
-            //}
+            //Length
+            Console.WriteLine("Length: " + numbers.Length);
 
-            //foreach (var character in name)
-            //{
-            //    Console.WriteLine(character);
-            //}
+            //IndexOf()
+            var index = Array.IndexOf(numbers, 9);
+            Console.WriteLine("Index of 9: " + index);
 
-            var numbers = new int[] { 0, 8, 2, 3, 2, 6 };
+            //Clear()
+            Array.Clear(numbers, 0, 3);
 
-            foreach (var number in numbers)
-            {
-                Console.WriteLine(number);
-            }
+            Console.WriteLine("Cleared Array");
+            foreach (var n in numbers)
+                Console.WriteLine(n);
+
+            //Copy()
+            int[] another = new int[4];
+            Array.Copy(numbers, another, 4);
+
+            Console.WriteLine("Copied Array");
+            foreach(var n in another)
+                Console.WriteLine(n);
+
+            //Sort()
+            Array.Sort(numbers);
+
+            Console.WriteLine("Sorted Array");
+            foreach (int n in numbers)
+                Console.WriteLine(n);
+
+            //Reverse()
+            Array.Reverse(numbers);
+
+            Console.WriteLine("Reversed Array");
+            foreach (var n in numbers)
+                Console.WriteLine(n);
 
             Console.ReadLine();
 
