@@ -12,33 +12,38 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-           var numbers = new List<int>() { 1, 2, 3, 4 };
-            numbers.Add(1);
-            numbers.AddRange(new int[3] { 5, 6, 7 });
+            var fullName = "Tharushi Umayanga";
+            Console.WriteLine("Trim: '{0}'", fullName.Trim());
+            Console.WriteLine("ToUpper; '{0}'", fullName.Trim().ToUpper());
 
-            foreach (var number in numbers)
-                Console.WriteLine(number);
+            var index = fullName.IndexOf(' ');
+            var firstName = fullName.Substring(0, index);
+            var lastName  = fullName.Substring(index + 1);
+            Console.WriteLine("First Name is: " +firstName);
+            Console.WriteLine("Last Name is: " + lastName);
 
-            //IndexOf
             Console.WriteLine();
-            Console.WriteLine("Index of 1 is: "+ numbers.IndexOf(1));
-            Console.WriteLine("Last Index of 1 is: " + numbers.LastIndexOf(1));
 
-            //Count
-            Console.WriteLine("Count is: "+ numbers.Count);
+            var names = fullName.Split(' ');
+            Console.WriteLine("FirstName: " + names[0]);
+            Console.WriteLine("LastName: " + names[1]);
 
-            //Remove
-            for (var i = 0; i < numbers.Count; i++)
-            {
-                if (numbers[i] == 1)
-                    numbers.Remove(numbers[i]);
-            }
-            foreach(var number in numbers)
-                Console.WriteLine(number);
+            var replace = fullName.Replace("Tharushi", "Ummah");
+            var replace1 = fullName.Replace(' ', '-');
 
-            //Clear
-            numbers.Clear();
-            Console.WriteLine("Count is: " + numbers.Count);
+            Console.WriteLine();
+            Console.WriteLine(replace);
+            Console.WriteLine(replace1);
+
+            if(String.IsNullOrWhiteSpace(" "))
+                Console.WriteLine("Invalid");
+
+            var str = "25";
+            var age = Convert.ToByte(str);
+            Console.WriteLine(age);
+
+            float price = 34.78f;
+            Console.WriteLine(price.ToString("C0"));
 
             Console.ReadLine();
 
