@@ -12,9 +12,24 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            var sentence = "My Name is Hasira Mahel Koswatta. I'm a passionate developer with experience of HTML, CSS, JavaScript, Unity, C# etc. Currently I'm an Undergraduate of SLTC Research University.";
-            var summary = StringUtility.SummerizeText(sentence);
-            Console.WriteLine(summary);
+            var builder = new StringBuilder("Hello World");
+
+            builder.Append('-', 18);
+            builder.AppendLine();
+            builder.Append("Tharushi Umayanga");
+            builder.AppendLine();
+            builder.Append('-', 18);
+
+            builder.Replace('-', '+');
+
+            builder.Remove(0, 10);
+
+            builder.Insert(0, new string('-', 10));
+
+            Console.WriteLine(builder);
+
+            Console.WriteLine("First Char: " +builder[0]);
+
             Console.ReadLine();
 
 
