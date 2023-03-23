@@ -12,43 +12,33 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            var numbers = new[] {3,1,7,8,9,6,5,4};
+           var numbers = new List<int>() { 1, 2, 3, 4 };
+            numbers.Add(1);
+            numbers.AddRange(new int[3] { 5, 6, 7 });
 
-            //Length
-            Console.WriteLine("Length: " + numbers.Length);
+            foreach (var number in numbers)
+                Console.WriteLine(number);
 
-            //IndexOf()
-            var index = Array.IndexOf(numbers, 9);
-            Console.WriteLine("Index of 9: " + index);
+            //IndexOf
+            Console.WriteLine();
+            Console.WriteLine("Index of 1 is: "+ numbers.IndexOf(1));
+            Console.WriteLine("Last Index of 1 is: " + numbers.LastIndexOf(1));
 
-            //Clear()
-            Array.Clear(numbers, 0, 3);
+            //Count
+            Console.WriteLine("Count is: "+ numbers.Count);
 
-            Console.WriteLine("Cleared Array");
-            foreach (var n in numbers)
-                Console.WriteLine(n);
+            //Remove
+            for (var i = 0; i < numbers.Count; i++)
+            {
+                if (numbers[i] == 1)
+                    numbers.Remove(numbers[i]);
+            }
+            foreach(var number in numbers)
+                Console.WriteLine(number);
 
-            //Copy()
-            int[] another = new int[4];
-            Array.Copy(numbers, another, 4);
-
-            Console.WriteLine("Copied Array");
-            foreach(var n in another)
-                Console.WriteLine(n);
-
-            //Sort()
-            Array.Sort(numbers);
-
-            Console.WriteLine("Sorted Array");
-            foreach (int n in numbers)
-                Console.WriteLine(n);
-
-            //Reverse()
-            Array.Reverse(numbers);
-
-            Console.WriteLine("Reversed Array");
-            foreach (var n in numbers)
-                Console.WriteLine(n);
+            //Clear
+            numbers.Clear();
+            Console.WriteLine("Count is: " + numbers.Count);
 
             Console.ReadLine();
 
