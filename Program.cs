@@ -8,37 +8,33 @@ using System.Threading.Tasks;
 namespace ConsoleApp1
 {
 
-    class Program
+
+     
+    class program
     {
-        static void Main(string[] args)
+
+       static void Main(string[] args)
         {
-            var builder = new StringBuilder("Hello World");
 
-            builder.Append('-', 18);
-            builder.AppendLine();
-            builder.Append("Tharushi Umayanga");
-            builder.AppendLine();
-            builder.Append('-', 18);
+            var dateTime = new DateTime(2023, 3, 24);
+            var now = DateTime.Now;
+            var today = DateTime.Today;
 
-            builder.Replace('-', '+');
+            var tomrrow = now.AddDays(1);
+            var yesterday = now.AddDays(-1);
 
-            builder.Remove(0, 10);
+            Console.WriteLine(now.ToLongDateString());
+            Console.WriteLine(now.ToShortDateString());
+            Console.WriteLine(now.ToLongTimeString());
+            Console.WriteLine(now.ToShortTimeString());
+            Console.WriteLine(now.ToString("yyy-MMM-dddd HH:mm"));
 
-            builder.Insert(0, new string('-', 10));
 
-            Console.WriteLine(builder);
 
-            Console.WriteLine("First Char: " +builder[0]);
+
 
             Console.ReadLine();
-
-
         }
-
-        
-        
-                                      
         
     }
-    
 }
