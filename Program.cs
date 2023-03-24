@@ -8,23 +8,37 @@ using System.Threading.Tasks;
 namespace ConsoleApp1
 {
 
-
-     
-    class program
+    class Program
     {
-       static void Main(string[] args)
-        { 
-            var random= new Random();
-            const int passwordLength = 10;
+        static void Main(string[] args)
+        {
+            var builder = new StringBuilder("Hello World");
 
-            var buffer = new char[passwordLength];
-            for (int i = 0; i < passwordLength; i++)
-                buffer[i] = (char) ('a' + random.Next(0,26));
+            builder.Append('-', 18);
+            builder.AppendLine();
+            builder.Append("Tharushi Umayanga");
+            builder.AppendLine();
+            builder.Append('-', 18);
 
-            var password =  new string (buffer);
-            Console.WriteLine(password);
+            builder.Replace('-', '+');
+
+            builder.Remove(0, 10);
+
+            builder.Insert(0, new string('-', 10));
+
+            Console.WriteLine(builder);
+
+            Console.WriteLine("First Char: " +builder[0]);
+
             Console.ReadLine();
+
+
         }
+
+        
+        
+                                      
         
     }
+    
 }
