@@ -30,3 +30,11 @@ E:\C#_Fork\C-Basics\obj\Debug\ConsoleApp1.csproj.SuggestedBindingRedirects.cache
 E:\C#_Fork\C-Basics\obj\Debug\ConsoleApp1.csproj.CoreCompileInputs.cache
 E:\C#_Fork\C-Basics\obj\Debug\ConsoleApp1.exe
 E:\C#_Fork\C-Basics\obj\Debug\ConsoleApp1.pdb
+D:\E\CSharp_Main\CSharp-Basics\bin\Debug\ConsoleApp1.exe.config
+D:\E\CSharp_Main\CSharp-Basics\bin\Debug\ConsoleApp1.exe
+D:\E\CSharp_Main\CSharp-Basics\bin\Debug\ConsoleApp1.pdb
+D:\E\CSharp_Main\CSharp-Basics\obj\Debug\ConsoleApp1.csproj.AssemblyReference.cache
+D:\E\CSharp_Main\CSharp-Basics\obj\Debug\ConsoleApp1.csproj.SuggestedBindingRedirects.cache
+D:\E\CSharp_Main\CSharp-Basics\obj\Debug\ConsoleApp1.csproj.CoreCompileInputs.cache
+D:\E\CSharp_Main\CSharp-Basics\obj\Debug\ConsoleApp1.exe
+D:\E\CSharp_Main\CSharp-Basics\obj\Debug\ConsoleApp1.pdb
