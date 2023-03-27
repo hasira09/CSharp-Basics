@@ -1,4 +1,4 @@
-﻿using ConsoleApp1.Maths;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,38 +9,40 @@ namespace ConsoleApp1
 {
 
 
-     
+
     class program
     {
 
-       static void Main(string[] args)
+        static void Main(string[] args)
         {
-            //creting
+            var fullName = "Tharushi Umayanga ";
+            Console.WriteLine("Trim: '{0}'", fullName.Trim());
+            Console.WriteLine("ToUpper: '{0}'", fullName.Trim().ToUpper());
 
-            var timeSpan = new TimeSpan(1, 2, 3);
-            var timeSpan1 = new TimeSpan(1, 0, 0);
 
-            var start = DateTime.Now;
-            var end = DateTime.Now.AddMinutes(2);
-            var duration = end - start;
-            Console.WriteLine("Duration: "+ duration);
+            var index = fullName.IndexOf(' ');
+            var firstName = fullName.Substring(0, index);
+            var lastname = fullName.Substring(index + 1);
+            Console.WriteLine("FirstName: " + firstName);
+            Console.WriteLine("Lastname: " + lastname);
 
-            //properties
-            Console.WriteLine("Minutes: " + timeSpan.Minutes);
-            Console.WriteLine("Total Minutes: " + timeSpan.TotalMinutes);
+            var names = fullName.Split(' ');
+            Console.WriteLine("FirstName: " + names[0]);
+            Console.WriteLine("LastName: " + names[1]);
 
-            //add
+            Console.WriteLine(fullName.Replace("Tharushi", "umayanga"));
+            if (String.IsNullOrWhiteSpace(" "))
+                Console.WriteLine("invalid");
 
-            Console.WriteLine("Add Example: "+ timeSpan.Add(TimeSpan.FromMinutes(8)));
-            Console.WriteLine("Subtract Example: " + timeSpan.Subtract(TimeSpan.FromMinutes(2)));
+            var str = "25";
+            var age = Convert.ToByte(str);
+            Console.WriteLine(age);
 
-            //to string
-           Console.WriteLine("ToString" + timeSpan.ToString());
+            float price = 29.86f;
+            Console.WriteLine(price.ToString("c0"));
 
-            //parse
-            Console.WriteLine("Parse: " + TimeSpan.Parse("01:02:03"));
+
             Console.ReadLine();
         }
-        
     }
 }
