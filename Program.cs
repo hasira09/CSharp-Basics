@@ -12,20 +12,35 @@ namespace ConsoleApp1
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Type Your Name:");
-            var name = Console.ReadLine();
-            var reversed = ReverseName(name);
-            Console.WriteLine("Reversed Name is " + reversed);
+           var numbers = new List<int>();
+
+            while (true)
+            {
+                Console.WriteLine("Enetr a number or 'Quit to exit): ");
+                var input = Console.ReadLine();
+
+                if (input.ToLower() == "quit")
+                    break;
+
+                numbers.Add(Convert.ToInt32(input));
+            }
+            var uniques = GetUniqueNumbers(numbers);
+
+            Console.WriteLine("Uniquw Numbers:");
+            foreach (var number in uniques)
+                Console.WriteLine(number);
             Console.ReadLine();
         }
 
-        public static string ReverseName(string name)
+        public static List<int> GetUniqueNumbers(List<int> numbers)
         {
-            var array = new char[name.Length];
-            for (var i = name.Length; i > 0; i--)
-                array[name.Length - i] = name[i - 1];
-
-            return new string(array);
+            var uniques = new List<int>();
+            foreach(var number in numbers)
+            {
+                if (!uniques.Contains(number))
+                    uniques.Add(number);
+            }
+            return uniques;
         }
     }
 }
