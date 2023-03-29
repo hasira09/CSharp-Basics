@@ -8,37 +8,20 @@ using System.Threading.Tasks;
 namespace ConsoleApp1
 {
 
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            var builder = new StringBuilder("Hello World");
+            Console.WriteLine("Type Your Name:");
+            var name = Console.ReadLine();
 
-            builder.Append('-', 18);
-            builder.AppendLine();
-            builder.Append("Tharushi Umayanga");
-            builder.AppendLine();
-            builder.Append('-', 18);
+            var array = new char[name.Length];
+            for (var i = name.Length; i > 0; i--)
+                array[name.Length - i] = name[i - 1];
 
-            builder.Replace('-', '+');
-
-            builder.Remove(0, 10);
-
-            builder.Insert(0, new string('-', 10));
-
-            Console.WriteLine(builder);
-
-            Console.WriteLine("First Char: " +builder[0]);
-
+            var reversed = new string(array);
+            Console.WriteLine("Reversed Name is " + reversed);
             Console.ReadLine();
-
-
         }
-
-        
-        
-                                      
-        
     }
-    
 }
