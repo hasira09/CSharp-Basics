@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace ConsoleApp1
 {
@@ -12,35 +13,28 @@ namespace ConsoleApp1
     {
         public static void Main(string[] args)
         {
-           var numbers = new List<int>();
-
-            while (true)
+            File.Copy(@"D:\csharp\Testing.png", @"E:\csharp\Testing.png", true);
+            File.Delete(@"E:\csharp\Testing2.jpg");
+            if (File.Exists(@"E:\csharp\Testing.png"))
             {
-                Console.WriteLine("Enetr a number or 'Quit to exit): ");
-                var input = Console.ReadLine();
-
-                if (input.ToLower() == "quit")
-                    break;
-
-                numbers.Add(Convert.ToInt32(input));
+                Console.WriteLine("Exist");
             }
-            var uniques = GetUniqueNumbers(numbers);
 
-            Console.WriteLine("Uniquw Numbers:");
-            foreach (var number in uniques)
-                Console.WriteLine(number);
+            var content = File.ReadAllText(@"E:\csharp\Testing3.docx");
+
+            var fileInfo = new FileInfo(@"E:\csharp\Testing4.docx");
+            fileInfo.CopyTo(@"D:\csharp\Testing4.docx");
+            fileInfo.Delete();
+            if (fileInfo.Exists)
+            {
+                Console.WriteLine("File Exists");
+            }
+            else
+            {
+                Console.WriteLine("Doesn't Exists");
+            }
             Console.ReadLine();
         }
-
-        public static List<int> GetUniqueNumbers(List<int> numbers)
-        {
-            var uniques = new List<int>();
-            foreach(var number in numbers)
-            {
-                if (!uniques.Contains(number))
-                    uniques.Add(number);
-            }
-            return uniques;
-        }
+           
     }
 }
