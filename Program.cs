@@ -13,28 +13,26 @@ namespace ConsoleApp1
     {
         public static void Main(string[] args)
         {
-            File.Copy(@"D:\csharp\Testing.png", @"E:\csharp\Testing.png", true);
-            File.Delete(@"E:\csharp\Testing2.jpg");
-            if (File.Exists(@"E:\csharp\Testing.png"))
-            {
-                Console.WriteLine("Exist");
-            }
+            Directory.CreateDirectory(@"D:\csharp\testfolder1");
 
-            var content = File.ReadAllText(@"E:\csharp\Testing3.docx");
+            //var files = Directory.GetFiles(@"D:\C# Programs\Github to C#\C-Basics", "*.sln*", SearchOption.AllDirectories);
+            //foreach (var file in files)
+            //    Console.WriteLine(file);
 
-            var fileInfo = new FileInfo(@"E:\csharp\Testing4.docx");
-            fileInfo.CopyTo(@"D:\csharp\Testing4.docx");
-            fileInfo.Delete();
-            if (fileInfo.Exists)
-            {
-                Console.WriteLine("File Exists");
-            }
-            else
-            {
-                Console.WriteLine("Doesn't Exists");
-            }
+            //var directories = Directory.GetDirectories(@"D:\C# Programs\Github to C#\C-Basics", "*.*", SearchOption.AllDirectories);
+            //foreach (var directory in directories)
+            //    Console.WriteLine(directory);
+
+            Directory.Exists(@"D:\csharp\testfolder1");
+
+            var directoryInfo = new DirectoryInfo(@"D:\csharp\testfolder1");
+            directoryInfo.GetFiles();
+            directoryInfo.GetDirectories();
+
             Console.ReadLine();
         }
+
+        
            
     }
 }
