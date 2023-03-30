@@ -11,23 +11,17 @@ namespace ConsoleApp1
 
     internal class Program
     {
-        public static void Main(string[] args)
+        static void Main(string[] args)
         {
-            Directory.CreateDirectory(@"D:\csharp\testfolder1");
+            var path = @"D:\C# Programs\Github to C#\C-Basics\ConsoleApp1.sln";
 
-            //var files = Directory.GetFiles(@"D:\C# Programs\Github to C#\C-Basics", "*.sln*", SearchOption.AllDirectories);
-            //foreach (var file in files)
-            //    Console.WriteLine(file);
+            var dotIndex = path.IndexOf('.');
+            var extension = path.Substring(dotIndex);
 
-            //var directories = Directory.GetDirectories(@"D:\C# Programs\Github to C#\C-Basics", "*.*", SearchOption.AllDirectories);
-            //foreach (var directory in directories)
-            //    Console.WriteLine(directory);
-
-            Directory.Exists(@"D:\csharp\testfolder1");
-
-            var directoryInfo = new DirectoryInfo(@"D:\csharp\testfolder1");
-            directoryInfo.GetFiles();
-            directoryInfo.GetDirectories();
+            Console.WriteLine("Extension: " +Path.GetExtension(path));
+            Console.WriteLine("FileName: " + Path.GetFileName(path));
+            Console.WriteLine("FileName without Extensioin: " + Path.GetFileNameWithoutExtension(path));
+            Console.WriteLine("Directory Name: " + Path.GetDirectoryName(path));
 
             Console.ReadLine();
         }
