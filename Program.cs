@@ -4,27 +4,33 @@ using System.Collections;
 
 namespace ConsoleApp1
 {
+    public class Persons
+    {
+        public string Name;
+
+        public void Introduce(string to)
+        {
+            Console.WriteLine("Hi {0}, I am {1}", to, Name);
+        }
+
+        public static Persons Parse(string str) 
+        {
+            var person = new Persons ();
+            person.Name = str;
+
+            return person;
+
+        }
+    }
+
     class Program
     {
         static void Main(string[] args)
         {
-            Queue MyQueue = new Queue();
-            MyQueue.Enqueue("This is the First Value");
-            MyQueue.Enqueue(1);
-            MyQueue.Enqueue(2);
-            MyQueue.Enqueue(3);
-            MyQueue.Enqueue(null);
-            MyQueue.Enqueue(49);
-            MyQueue.Enqueue("This is the Last Value");
-
-            Console.WriteLine($"Number of Elements = {MyQueue.Count}");
-
+            var person = Persons.Parse("Hasira");
+            person.Introduce("Tharushi");
 
             Console.ReadLine();
         }
     }
 }
-
-//The Queue collection is the opposite of the Stack Collection
-//Based in FIFO
-//
